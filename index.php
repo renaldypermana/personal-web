@@ -38,10 +38,6 @@
         	
         </header>
 		<div id="myprofile">
-        	<div>
-        		
-        	</div>
-      
         <h5>PENDIDIKAN</h5>
         <?php foreach ($pendidikan as $key => $value): ?>
         <div class="ui very relaxed list">

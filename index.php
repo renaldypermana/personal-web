@@ -27,7 +27,7 @@
             <div class="ui container">
                 <a href="#home" class="header activate item">
                     <img class="logo" src="img/ra.png">
-                    RENALDY
+                    RENALDY P
                 </a>
                 <a class="item" href="#myprofile">Profil saya</a>
                 <a class="item">About</a>
@@ -35,7 +35,6 @@
             </div>
         </div>
         <header class="bgimg"id="home">
-        	
         </header>
 		<div id="myprofile">
         <h5>PENDIDIKAN</h5>
@@ -49,6 +48,7 @@
             </div>
          </div>
          <?php endforeach ?><br>
+           </div>
            </div>
 </body>
 </html>

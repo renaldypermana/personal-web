@@ -43,7 +43,7 @@
     ];
 	?>
 	        <div class="ui medium top fixed hidden menu">
-            <div class="ui container">
+            <div class="ui container ui inverted">
                 <a href="#home" class="header activate item">
                     <img class="logo" src="img/ra.png">
                     RENALDY
@@ -58,7 +58,7 @@
         </header>
 
         <!-- PROFILE -->
-        <div id="myprofile">
+        <div id="myprofile" style="text-align: center;">
             <br>
              <div class="ui grid">
                 <?php foreach ($profil as $key => $value): ?>
@@ -93,18 +93,11 @@
            </div>
   </div>
           <br>
-            <div class="ui grid">
-                <div class="two column only">
-                     <div class="column">
-                <?php foreach ($profil as $key => $value): ?>
-                        <div class="ui active progress">
-                            <div class="bar">
-                            <div class="progress"></div>
-                          </div>
-                          <div class="label">Uploading Files</div>
-                         </div>
-                 <?php endforeach ?><br>
-            </div></div>
+        <div class="ui indicating progress" data-value="1" data-total="200" id="example5">
+         <div class="bar">
+            <div class="progress"></div>
+        </div>
+        <div class="label">Waiting for you to press button</div>
         </div>
     </div>
     <br>

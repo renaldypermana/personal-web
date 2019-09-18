@@ -4,10 +4,11 @@
     <link rel="icon" type="img/png" href="img/ra.png" />
 	<title>RA</title>
 	<link rel="stylesheet" type="text/css" href="dist/semantic.css">	
-	<link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="../dist/components/progress.css">
+	<link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="dist/components/progress.css">
 
     <script type="dist/semantic.js"></script>
     <script type="dist/semantic.min.js"></script>
+    <script type="dist/components/progress.js"></script>
 </head>
 <body>
 	<?php
@@ -42,7 +43,19 @@
     ];
     $keahlian =[
         [
-            'cpp' => 'c++'
+            'bahasa' => 'C++',
+        ],
+          [
+            'bahasa' => 'HTML',
+        ],
+          [
+            'bahasa' => 'JAVA',
+        ],  [
+            'bahasa' => 'CSS',
+        ],  [
+            'bahasa' => 'PHP',
+        ],  [
+            'bahasa' => 'MYSQL',
         ],
     ];
 	?>
@@ -58,6 +71,9 @@
             </div>
         </div>
         <header class="bgimg"id="home">
+              <div class="ui text container">
+                <h2><?php include 'header.php'; ?></h2>
+              </div>
         </header>
 
         <!-- PROFILE -->
@@ -84,7 +100,17 @@
       <div class="center aligned row">
         <div class="column">
           <h3>"My Skill"</h3>
+          <?php foreach ($keahlian as $key => $value): ?>
+          <div class="ui active progress" data-value="30" data-total="100" id="example5">
+           <div class="bar">
+            <div class="progress"></div>
+             </div>
+              <div class="label"><?php echo $value['bahasa']?></div> 
+            </div>
+            <?php endforeach ?>
         </div>
+
+        <!--PENDIDIKAN -->
         <div class="column"> <h3 style="text-indent: 30px">RIWAYAT PENDIDIKAN</h3>
             <?php foreach ($pendidikan as $key => $value): ?>
                 <div class="ui grid">
@@ -98,7 +124,7 @@
                      </div>
                 </div>
             </div>
-         <?php endforeach ?><br>        </div>
+         <?php endforeach ?><br></div>
       </div>
     </div>
   </div>

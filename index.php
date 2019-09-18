@@ -83,10 +83,9 @@
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
-          <h3>"What a Company"</h3>
-          <p>That is what they all say about us</p>
+          <h3>"My Skill"</h3>
         </div>
-        <div class="column"> <h5 style="text-indent: 30px">RIWAYAT PENDIDIKAN</h5>
+        <div class="column"> <h3 style="text-indent: 30px">RIWAYAT PENDIDIKAN</h3>
             <?php foreach ($pendidikan as $key => $value): ?>
                 <div class="ui grid">
                   <div class="three column only">

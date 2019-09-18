@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Coba semantic Ui</title>
+    <link rel="icon" type="img/png" href="img/ra.png" />
+	<title>RA</title>
 	<link rel="stylesheet" type="text/css" href="dist/semantic.css">	
-	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+
+    <script type="dist/semantic.js"></script>
+    <script type="dist/semantic.min.js"></script>
 </head>
 <body>
 	<?php
@@ -54,7 +58,6 @@
             </div>
         </div>
         <header class="bgimg"id="home">
-        	
         </header>
 
         <!-- PROFILE -->
@@ -69,7 +72,7 @@
                   <img src="img/ra.png" class="ui circular image">
                   <?php echo $value['profil']?>
                   </h2>
-                  <h3>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya adalah <?php echo $value['hobi']?></h3>
+                  <h3>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></h3>
               </div>
               <?php endforeach ?>
               <!--Pendidikan -->
@@ -92,14 +95,9 @@
           </div>
            </div>
   </div>
-          <br>
-        <div class="ui indicating progress" data-value="1" data-total="200" id="example5">
-         <div class="bar">
-            <div class="progress"></div>
-        </div>
-        <div class="label">Waiting for you to press button</div>
-        </div>
-    </div>
+</div>
+        
+        <br>
     <br>
 </body>
 </html>

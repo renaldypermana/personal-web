@@ -63,24 +63,21 @@
         <!-- PROFILE -->
         <div id="myprofile" class="ui container">
             <br>
-             <div class="ui grid">
-                <?php foreach ($profil as $key => $value): ?>
-                    <div class="two column row">
-                    <div class="computer only column">
-                    <div class="ui segment">
-                  <h2 class="ui header">
+            <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+         <?php foreach ($profil as $key => $value): ?>
+         <h2 class="ui header">
                   <img src="img/ra.png" class="ui circular image">
                   <?php echo $value['profil']?>
                   </h2>
                   <h3>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></h3>
-              </div>
               <?php endforeach ?>
-              
-              <!--Pendidikan -->
-          </div>
-           </div>
-         </div>
-        
+        </div>
+      </div>
+    </div>
+  </div>
         </div>
         <div class="ui vertical stripe quote segment">
     <div class="ui equal width stackable internally celled grid">

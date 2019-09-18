@@ -61,7 +61,7 @@
         </header>
 
         <!-- PROFILE -->
-        <div id="myprofile" style="text-align: center;">
+        <div id="myprofile" class="ui container">
             <br>
              <div class="ui grid">
                 <?php foreach ($profil as $key => $value): ?>

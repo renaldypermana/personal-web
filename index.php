@@ -9,6 +9,7 @@
     <script type="dist/semantic.js"></script>
     <script type="dist/semantic.min.js"></script>
     <script type="dist/components/progress.js"></script>
+
 </head>
 <body>
 	<?php
@@ -59,6 +60,7 @@
         ],
     ];
 	?>
+          <!-- MAIN MENU -->
 	        <div class="ui medium top fixed hidden menu">
             <div class="ui container ui inverted">
                 <a href="#home" class="header activate item">
@@ -95,6 +97,8 @@
     </div>
   </div>
         </div>
+
+        <!-- KEAHLIAN -->
         <div class="ui vertical stripe quote segment">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
@@ -128,8 +132,40 @@
       </div>
     </div>
   </div>
+  <br>  <br>  
+
+  <!-- FORM -->
+  <div class="ui container">
+    <form class="ui form segment">
+  <div class="ui horizontal divider"><p style="text-align: center;" class="ui large">Tell Us About Yourself</p></div>
+    <div class="two fields">
+    <div class="field">
+      <label>Name</label>
+      <input placeholder="Name" name="name" type="text" required="">
+    </div>
+    <div class="field">
+      <label>EMAIL</label>
+      <input placeholder="email@email" name="name" type="email" required="">
+    </div>
+  </div>
+  <div class="ui form">
+  <div class="field">
+    <label>Short Text</label>
+    <textarea rows="2"></textarea>
+  </div>
+</div>
+<div class="inline field">
+    <div class="ui checkbox">
+      <input type="checkbox" name="terms">
+      <label>I agree to the terms and conditions</label>
+    </div>
+  </div>
+  <div class="ui primary submit button">Submit</div>
+</form>
+</div>
         
         <br>
     <br>
+    
 </body>
 </html>

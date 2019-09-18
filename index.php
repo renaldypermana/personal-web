@@ -6,12 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="dist/semantic.css">	
 	<link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="dist/components/progress.css">
   <link rel="stylesheet" href="dist/lightbox.min.css">
-
-
-  <script src="../dist/js/lightbox-plus-jquery.min.js"></script>
-    <script type="dist/semantic.js"></script>
-    <script type="dist/semantic.min.js"></script>
-    <script type="dist/components/progress.js"></script>
+  <link rel="stylesheet" type="text/css" href="dist/components/form.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/progress.css">
+  <link rel="stylesheet" type="text/css" href="dist/lightbox.css">
 
 </head>
 <body>
@@ -108,7 +105,7 @@
         <div class="column">
           <h3>"My Skill"</h3>
           <?php foreach ($keahlian as $key => $value): ?>
-          <div class="ui active progress" data-value="30" data-total="100" id="example5">
+          <div class="ui active teal progress"  >
            <div class="bar">
             <div class="progress"></div>
              </div>
@@ -145,27 +142,27 @@
       <div class="row">
         <div class="eight wide column">
           <h3 class="ui header">MEMBUAT DASHBOARD ADMINISTRATOR</h3>
-          <p>Pembuatan Dashboard admin Pegawai/siswa. Menggunakan HTML 5 dan CSS 3.Dengan mennu navbar di samping dan ada form dan hasil tabel di administrator tersebut</p>
+          <p>Pembuatan Dashboard admin Pegawai/siswa. Menggunakan HTML 5 dan CSS 3.Dengan menu navbar di samping dan ada form dan hasil tabel di administrator tersebut</p>
         </div>
         <div class="six wide right floated column">
-          <a href="images/image-1.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a>
+          <a class="ui primary button" href="img/login.png" data-lightbox="login" data-title="Ini adalah tampilan halaman login.">Tampilkan</a>
         </div>
       </div>
     </div>
   </div>
 <br><br>
   <!-- FORM -->
-  <div class="ui container" id="contact">
-    <form class="ui form">
+  <div class="ui container">
+    <form class="ui form" action="" method="post">
   <div class="ui horizontal divider"><p style="text-align: center;" class="ui large">contact me</p></div>
     <div class="two fields">
     <div class="field">
       <label>Name</label>
-      <input placeholder="Name" name="name" type="text" required="">
+      <input placeholder="Name" name="name" type="text" >
     </div>
     <div class="field">
       <label>EMAIL</label>
-      <input placeholder="email@email" name="name" type="email" required="">
+      <input placeholder="E-mail Address" name="email" type="text" >
     </div>
   </div>
   <div class="ui form">
@@ -180,12 +177,76 @@
       <label>I agree to the terms and conditions</label>
     </div>
   </div>
-  <div class="ui primary submit button">Submit</div>
+  <div class="ui basic primary submit button">Submit</div>
+  <div class="ui error message"></div>
 </form>
 </div>
-        
         <br>
     <br>
-    
+    <div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Thank you
+  </div>
+  <div class="image content">
+    <div class="description">
+      <div class="ui header">DEAR,<?php echo $_POST['name']; ?></div>
+      <p>DATA HAS BEEN SAVED</p>
+      <p>WE WILL CONTACT YOU IN SEVERAL DAYS</p>
+    </div>
+  </div>
+  </div>
+</div>
+    <!-- galeri -->
+
+  <a href="img/dashboard.png" data-lightbox="dashboard" data-title="ini adalah tampilan dashboard"></a>
+  <a href="img/data-siswa".png" data-lightbox="data siswa" data-title="ini adalah tampilan data siswa"></a>
+  <a href="img/form-izin.png" data-lightbox="form izin" data-title="ini adalah tampilan form izin"></a>
+
+  <script src="dist/lightbox-plus-jquery.min.js"></script>
+  <script src="dist/lightbox-plus-jquery.js"></script>
+    <script src="dist/semantic.js"></script>
+    <script src="dist/semantic.min.js"></script>
+    <script src="dist/components/progress.js"></script>
+  <script src="dist/components/form.js"></script>
+    <script srce="dist/components/modal.js"></script>
+    <script>$('.ui.form')
+  .form({
+    fields: {
+      name: {
+        identifier: 'name',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter your name'
+          }
+        ]
+      }, 
+      email: {
+        identifier: 'email',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter a email'
+          }
+        ]
+      },
+      terms: {
+        identifier: 'terms',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'You must agree to the terms and conditions'
+          }
+        ]
+      }
+    }
+  })
+;{
+  $('.ui.modal')
+  .modal('show')
+;
+}
+    </script>
 </body>
 </html>

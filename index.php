@@ -5,7 +5,10 @@
 	<title>RA</title>
 	<link rel="stylesheet" type="text/css" href="dist/semantic.css">	
 	<link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="dist/components/progress.css">
+  <link rel="stylesheet" href="dist/lightbox.min.css">
 
+
+  <script src="../dist/js/lightbox-plus-jquery.min.js"></script>
     <script type="dist/semantic.js"></script>
     <script type="dist/semantic.min.js"></script>
     <script type="dist/components/progress.js"></script>
@@ -134,10 +137,27 @@
   </div>
   <br>  <br>  
 
+  <!-- PORTOFOLIO -->
+
+  <div class="ui horizontal divider container" id="about"><p style="text-align: center;" class="ui large">MY PORTOFOLIO</p></div>
+  <div class="ui vertical stripe">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <h3 class="ui header">MEMBUAT DASHBOARD ADMINISTRATOR</h3>
+          <p>Pembuatan Dashboard admin Pegawai/siswa. Menggunakan HTML 5 dan CSS 3.Dengan mennu navbar di samping dan ada form dan hasil tabel di administrator tersebut</p>
+        </div>
+        <div class="six wide right floated column">
+          <a href="images/image-1.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<br><br>
   <!-- FORM -->
-  <div class="ui container">
-    <form class="ui form segment">
-  <div class="ui horizontal divider"><p style="text-align: center;" class="ui large">Tell Us About Yourself</p></div>
+  <div class="ui container" id="contact">
+    <form class="ui form">
+  <div class="ui horizontal divider"><p style="text-align: center;" class="ui large">contact me</p></div>
     <div class="two fields">
     <div class="field">
       <label>Name</label>
@@ -153,7 +173,7 @@
     <label>Short Text</label>
     <textarea rows="2"></textarea>
   </div>
-</div>
+</div><br>
 <div class="inline field">
     <div class="ui checkbox">
       <input type="checkbox" name="terms">

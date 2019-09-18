@@ -4,7 +4,7 @@
     <link rel="icon" type="img/png" href="img/ra.png" />
 	<title>RA</title>
 	<link rel="stylesheet" type="text/css" href="dist/semantic.css">	
-	<link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+	<link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="../dist/components/progress.css">
 
     <script type="dist/semantic.js"></script>
     <script type="dist/semantic.min.js"></script>
@@ -75,9 +75,21 @@
                   <h3>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></h3>
               </div>
               <?php endforeach ?>
+              
               <!--Pendidikan -->
-       <div>
-            <h5 style="text-indent: 30px">RIWAYAT PENDIDIKAN</h5>
+          </div>
+           </div>
+         </div>
+        
+        </div>
+        <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+          <h3>"What a Company"</h3>
+          <p>That is what they all say about us</p>
+        </div>
+        <div class="column"> <h5 style="text-indent: 30px">RIWAYAT PENDIDIKAN</h5>
             <?php foreach ($pendidikan as $key => $value): ?>
                 <div class="ui grid">
                   <div class="three column only">
@@ -90,12 +102,10 @@
                      </div>
                 </div>
             </div>
-         <?php endforeach ?><br>
-       </div>
-          </div>
-           </div>
+         <?php endforeach ?><br>        </div>
+      </div>
+    </div>
   </div>
-</div>
         
         <br>
     <br>

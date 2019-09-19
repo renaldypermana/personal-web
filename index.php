@@ -5,7 +5,7 @@
 	<title>RA</title>
 	<link rel="stylesheet" type="text/css" href="dist/semantic.css">	
 	<link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="dist/components/progress.css">
-  <link rel="stylesheet" href="dist/lightbox.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/lightbox.css">
   <link rel="stylesheet" type="text/css" href="dist/components/form.css">
   <link rel="stylesheet" type="text/css" href="dist/components/progress.css">
   <link rel="stylesheet" type="text/css" href="dist/lightbox.css">
@@ -44,18 +44,30 @@
     ];
     $keahlian =[
         [
+
+            'id' => 'id="example2"',
             'bahasa' => 'C++',
         ],
           [
+
+            'id' => 'id="example3"',
             'bahasa' => 'HTML',
         ],
           [
+
+            'id' => 'id="example4"',
             'bahasa' => 'JAVA',
         ],  [
+
+            'id' => 'id="example5"',
             'bahasa' => 'CSS',
         ],  [
+
+            'id' => 'id="example6"',
             'bahasa' => 'PHP',
         ],  [
+
+            'id' => 'id="example7"',
             'bahasa' => 'MYSQL',
         ],
     ];
@@ -68,13 +80,15 @@
                     RENALDY
                 </a>
                 <a class="item" href="#myprofile">Profil saya</a>
-                <a class="item">About</a>
-                <a class="item">Contact Me</a>
+                <a class="item" href="#about" >About</a>
+                <a class="item" href="#contact">Contact Me</a>
             </div>
         </div>
+        <!-- Header -->
         <header class="bgimg"id="home">
               <div class="ui text container">
-                <h2><?php include 'header.php'; ?></h2>
+                <br><br><br><br><br><br><br><br><br><br><br>
+                <h2 style="font-size: 50px; color: white; text-align: center" class="text container"><?php include 'header.php'; ?></h2>
               </div>
         </header>
 
@@ -105,7 +119,7 @@
         <div class="column">
           <h3>"My Skill"</h3>
           <?php foreach ($keahlian as $key => $value): ?>
-          <div class="ui active teal progress"  >
+          <div class="ui active indicating progress" <?php echo $value['id']?> >
            <div class="bar">
             <div class="progress"></div>
              </div>
@@ -145,14 +159,14 @@
           <p>Pembuatan Dashboard admin Pegawai/siswa. Menggunakan HTML 5 dan CSS 3.Dengan menu navbar di samping dan ada form dan hasil tabel di administrator tersebut</p>
         </div>
         <div class="six wide right floated column">
-          <a class="ui primary button" href="img/login.png" data-lightbox="login" data-title="Ini adalah tampilan halaman login.">Tampilkan</a>
+          <a class="ui primary button" href="img/login.png" data-lightbox="dashboard" data-title="Ini adalah tampilan halaman login.">Tampilkan</a>
         </div>
       </div>
     </div>
   </div>
 <br><br>
   <!-- FORM -->
-  <div class="ui container">
+  <div class="ui container" id="contact">
     <form class="ui form" action="" method="post">
   <div class="ui horizontal divider"><p style="text-align: center;" class="ui large">contact me</p></div>
     <div class="two fields">
@@ -197,20 +211,25 @@
   </div>
   </div>
 </div>
+
+<!-- footer -->
+  <div>
+    <p style="text-align: center; font-size: 15px;" class="ui inverted vertical footer segment container"><?php include 'footer.php' ?></p>
+  </div>
     <!-- galeri -->
 
   <a href="img/dashboard.png" data-lightbox="dashboard" data-title="ini adalah tampilan dashboard"></a>
-  <a href="img/data-siswa".png" data-lightbox="data siswa" data-title="ini adalah tampilan data siswa"></a>
-  <a href="img/form-izin.png" data-lightbox="form izin" data-title="ini adalah tampilan form izin"></a>
+  <a href="img/data-siswa.png" data-lightbox="dashboard" data-title="ini adalah tampilan data siswa"></a>
+  <a href="img/form-izin.png" data-lightbox="dashboard" data-title="ini adalah tampilan form izin"></a>
 
-  <script src="dist/lightbox-plus-jquery.min.js"></script>
-  <script src="dist/lightbox-plus-jquery.js"></script>
+  <script src="dist/js/lightbox-plus-jquery.js"></script>
     <script src="dist/semantic.js"></script>
     <script src="dist/semantic.min.js"></script>
     <script src="dist/components/progress.js"></script>
   <script src="dist/components/form.js"></script>
     <script srce="dist/components/modal.js"></script>
-    <script>$('.ui.form')
+    <script>
+      $('.ui.form')
   .form({
     fields: {
       name: {
@@ -242,11 +261,45 @@
       }
     }
   })
-;{
+;
   $('.ui.modal')
   .modal('show')
 ;
-}
+$('#example2').progress({
+  percent: 54
+});
+
+$('#example3').progress({
+  percent: 80
+});
+
+$('#example4').progress({
+  percent: 30
+});
+
+$('#example5').progress({
+  percent: 30
+});
+
+$('#example6').progress({
+  percent: 40
+});
+
+$('#example7').progress({
+  percent: 30
+});
+
+$('a[href*="#"]').on('click', function(e) {
+  e.preventDefault()
+
+  $('html, body').animate(
+    {
+      scrollTop: $($(this).attr('href')).offset().top,
+    },
+    500,
+    'linear'
+  )
+})
     </script>
 </body>
 </html>

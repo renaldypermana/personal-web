@@ -8,8 +8,6 @@
   <link rel="stylesheet" type="text/css" href="dist/css/lightbox.css">
   <link rel="stylesheet" type="text/css" href="dist/components/form.css">
   <link rel="stylesheet" type="text/css" href="dist/components/progress.css">
-  <link rel="stylesheet" type="text/css" href="dist/lightbox.css">
-
 </head>
 <body>
 	<?php
@@ -71,6 +69,36 @@
             'bahasa' => 'MYSQL',
         ],
     ];
+$portofolio =[
+        [
+          'img' => 'href="img/dashboard.png"',
+          'data' => 'data-lightbox="dashboard"',
+          'keterangan' => 'data-title="ini adalah tampilan dashboard"',
+
+        ],
+        [
+          'img' => 'href="img/data-siswa.png"',
+          'data' => 'data-lightbox="dashboard"',
+          'keterangan' => 'data-title="ini adalah tampilan data siswa"',
+
+        ],
+        [
+          'img' => 'href="img/form-izin.png"',
+          'data' => 'data-lightbox="dashboard"',
+          'keterangan' => 'data-title="ini adalah tampilan form izin"',
+        ],
+        [
+          'img' => 'href="img/about.png"',
+          'data' => 'data-lightbox="coffee"',
+          'keterangan' => 'data-title="ini adalah Halaman tentang Blu COFFEESHOP"',
+
+        ],
+        [
+          'img' => 'href="img/testimoni.png"',
+          'data' => 'data-lightbox="coffee"',
+          'keterangan' => 'data-title="ini adalah halaman testimoni Pelanggan"',
+        ],
+    ];
 	?>
           <!-- MAIN MENU -->
 	        <div class="ui medium top fixed hidden menu">
@@ -87,8 +115,7 @@
         <!-- Header -->
         <header class="bgimg"id="home">
               <div class="ui text container">
-                <br><br><br><br><br><br><br><br><br><br><br>
-                <h2 style="font-size: 50px; color: white; text-align: center" class="text container"><?php include 'header.php'; ?></h2>
+                <h2 style="font-size: 50px; color: white; position:absolute;top:50%;" class="text container"><?php include 'header.php'; ?></h2>
               </div>
         </header>
 
@@ -113,7 +140,7 @@
         </div>
 
         <!-- KEAHLIAN -->
-        <div class="ui vertical stripe quote segment">
+        <div class="ui vertical stripe quote segment container">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
@@ -153,13 +180,23 @@
   <div class="ui horizontal divider container" id="about"><p style="text-align: center;" class="ui large">MY PORTOFOLIO</p></div>
   <div class="ui vertical stripe">
     <div class="ui middle aligned stackable grid container">
-      <div class="row">
+    <div class="row">
         <div class="eight wide column">
-          <h3 class="ui header">MEMBUAT DASHBOARD ADMINISTRATOR</h3>
+          <h3 class="ui header">DASHBOARD SEDERHANA </h3>
           <p>Pembuatan Dashboard admin Pegawai/siswa. Menggunakan HTML 5 dan CSS 3.Dengan menu navbar di samping dan ada form dan hasil tabel di administrator tersebut</p>
         </div>
         <div class="six wide right floated column">
-          <a class="ui primary button" href="img/login.png" data-lightbox="dashboard" data-title="Ini adalah tampilan halaman login.">Tampilkan</a>
+          <a class="ui basic pink button" href="img/login.png" data-lightbox="dashboard" data-title="Ini adalah tampilan halaman login.">GALLERY</a>
+        </div>
+      </div>
+       <div class="row">
+        <div class="eight wide column">
+          <h3 class="ui header">Blu coffeeshop</h3>
+          <p>Pembuatan website blu Coffeshop <a href="http://wwwaldy.000webhostapp.com"
+            ><button class="ui  button">Tampilan website online</button></a></p>
+        </div>
+        <div class="six wide right floated column">
+          <a class="ui basic pink button" href="img/coffeeshop.png" data-lightbox="coffee" data-title="Ini adalah Halaman utama Blu Coffee shop">GALLERY</a>
         </div>
       </div>
     </div>
@@ -214,13 +251,13 @@
 
 <!-- footer -->
   <div>
-    <p style="text-align: center; font-size: 15px;" class="ui inverted vertical footer segment container"><?php include 'footer.php' ?></p>
+    <p style="text-align: center; font-size: 15px;" class="ui inverted vertical footer segment"><?php include 'footer.php' ?></p>
   </div>
     <!-- galeri -->
-
-  <a href="img/dashboard.png" data-lightbox="dashboard" data-title="ini adalah tampilan dashboard"></a>
-  <a href="img/data-siswa.png" data-lightbox="dashboard" data-title="ini adalah tampilan data siswa"></a>
-  <a href="img/form-izin.png" data-lightbox="dashboard" data-title="ini adalah tampilan form izin"></a>
+  <?php foreach ($portofolio as $key => $value): ?>
+  <a <?php echo $value['img'] ?> <?php echo $value['data'] ?><?php echo $value['keterangan'] ?>
+></a>
+  <?php endforeach ?>
 
   <script src="dist/js/lightbox-plus-jquery.js"></script>
     <script src="dist/semantic.js"></script>

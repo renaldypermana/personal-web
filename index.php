@@ -71,32 +71,32 @@
     ];
 $portofolio =[
         [
-          'img' => 'href="img/dashboard.png"',
-          'data' => 'data-lightbox="dashboard"',
-          'keterangan' => 'data-title="ini adalah tampilan dashboard"',
+          'img' => 'img/dashboard.png',
+          'data' => 'dashboard',
+          'keterangan' => 'ini adalah tampilan dashboard',
 
         ],
         [
-          'img' => 'href="img/data-siswa.png"',
-          'data' => 'data-lightbox="dashboard"',
-          'keterangan' => 'data-title="ini adalah tampilan data siswa"',
+          'img' => 'img/data-siswa.png',
+          'data' => 'dashboard',
+          'keterangan' => 'ini adalah tampilan data siswa',
 
         ],
         [
-          'img' => 'href="img/form-izin.png"',
-          'data' => 'data-lightbox="dashboard"',
-          'keterangan' => 'data-title="ini adalah tampilan form izin"',
+          'img' => 'img/form-izin.png',
+          'data' => 'dashboard',
+          'keterangan' => 'ini adalah tampilan form izin',
         ],
         [
-          'img' => 'href="img/about.png"',
-          'data' => 'data-lightbox="coffee"',
-          'keterangan' => 'data-title="ini adalah Halaman tentang Blu COFFEESHOP"',
+          'img' => 'img/about.png',
+          'data' => 'coffee',
+          'keterangan' => 'ini adalah Halaman tentang Blu COFFEESHOP',
 
         ],
         [
-          'img' => 'href="img/testimoni.png"',
-          'data' => 'data-lightbox="coffee"',
-          'keterangan' => 'data-title="ini adalah halaman testimoni Pelanggan"',
+          'img' => 'img/testimoni.png',
+          'data' => 'coffee',
+          'keterangan' => 'ini adalah halaman testimoni Pelanggan',
         ],
     ];
 	?>
@@ -228,25 +228,12 @@ $portofolio =[
       <label>I agree to the terms and conditions</label>
     </div>
   </div>
-  <div class="ui basic primary submit button">Submit</div>
+  <div class="ui basic primary submit button" type="button" id="test">Submit</div>
   <div class="ui error message"></div>
 </form>
 </div>
         <br>
     <br>
-    <div class="ui modal">
-  <i class="close icon"></i>
-  <div class="header">
-    Thank you
-  </div>
-  <div class="image content">
-    <div class="description">
-      <div class="ui header">DEAR,<?php echo $_POST['name']; ?></div>
-      <p>DATA HAS BEEN SAVED</p>
-      <p>WE WILL CONTACT YOU IN SEVERAL DAYS</p>
-    </div>
-  </div>
-  </div>
 </div>
 
 <!-- footer -->
@@ -255,10 +242,35 @@ $portofolio =[
   </div>
     <!-- galeri -->
   <?php foreach ($portofolio as $key => $value): ?>
-  <a <?php echo $value['img'] ?> <?php echo $value['data'] ?><?php echo $value['keterangan'] ?>
+  <a href="<?php echo $value['img'] ?>" data-lightbox="<?php echo $value['data'] ?>" data-title="<?php echo $value['keterangan'] ?>"
 ></a>
   <?php endforeach ?>
+<!-- TES DOANG-->
+    <div class="ui modal test">
+  <i class="close icon"></i>
+  <div class="header">
+    THANK YOU
+  </div>
+  <div class="image content">
+    <div class="description">
+      <div class="ui header">DEAR, <?php echo $_POST['name']; ?></div>
+      <p>we will contact you on <?php echo $_POST['email']; ?></p>
+      <p>Is it okay to use this email?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      okay
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
 
+<!-- -->
+<script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.7/d3.min.js"></script>
   <script src="dist/js/lightbox-plus-jquery.js"></script>
     <script src="dist/semantic.js"></script>
     <script src="dist/semantic.min.js"></script>
@@ -299,9 +311,6 @@ $portofolio =[
     }
   })
 ;
-  $('.ui.modal')
-  .modal('show')
-;
 $('#example2').progress({
   percent: 54
 });
@@ -336,7 +345,16 @@ $('a[href*="#"]').on('click', function(e) {
     500,
     'linear'
   )
-})
+});
+$(function(){
+  $("#test").click(function(){
+   duration: 2000,
+    $(".test").modal('show');
+  });
+  $(".test").modal({
+    closable: true
+  });
+});
     </script>
 </body>
 </html>

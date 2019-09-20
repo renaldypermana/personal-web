@@ -72,13 +72,13 @@
 $portofolio =[
         [
           'img' => 'img/dashboard.png',
-          'data' => 'dashboard',
+          'data' => 'dashboard"',
           'keterangan' => 'ini adalah tampilan dashboard',
 
         ],
         [
           'img' => 'img/data-siswa.png',
-          'data' => 'dashboard',
+          'data' => 'dashboard"',
           'keterangan' => 'ini adalah tampilan data siswa',
 
         ],
@@ -192,7 +192,7 @@ $portofolio =[
        <div class="row">
         <div class="eight wide column">
           <h3 class="ui header">Blu coffeeshop</h3>
-          <p>Pembuatan website blu Coffeshop <a href="http://wwwaldy.000webhostapp.com"
+          <p>Pembuatan website blu Coffeshop <a href="http://wwwaldy.000webhostapp.com" target="blank" 
             ><button class="ui  button">Tampilan website online</button></a></p>
         </div>
         <div class="six wide right floated column">
@@ -204,7 +204,7 @@ $portofolio =[
 <br><br>
   <!-- FORM -->
   <div class="ui container" id="contact">
-    <form class="ui form" action="" method="post">
+    <form class="ui form" action="thankyou.php" method="post">
   <div class="ui horizontal divider"><p style="text-align: center;" class="ui large">contact me</p></div>
     <div class="two fields">
     <div class="field">
@@ -228,13 +228,12 @@ $portofolio =[
       <label>I agree to the terms and conditions</label>
     </div>
   </div>
-  <div class="ui basic primary submit button" type="button" id="test">Submit</div>
+  <div class="ui basic primary submit button">Submit</div>
   <div class="ui error message"></div>
 </form>
 </div>
         <br>
     <br>
-</div>
 
 <!-- footer -->
   <div>
@@ -245,31 +244,6 @@ $portofolio =[
   <a href="<?php echo $value['img'] ?>" data-lightbox="<?php echo $value['data'] ?>" data-title="<?php echo $value['keterangan'] ?>"
 ></a>
   <?php endforeach ?>
-<!-- TES DOANG-->
-    <div class="ui modal test">
-  <i class="close icon"></i>
-  <div class="header">
-    THANK YOU
-  </div>
-  <div class="image content">
-    <div class="description">
-      <div class="ui header">DEAR, <?php echo $_POST['name']; ?></div>
-      <p>we will contact you on <?php echo $_POST['email']; ?></p>
-      <p>Is it okay to use this email?</p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui black deny button">
-      Nope
-    </div>
-    <div class="ui positive right labeled icon button">
-      okay
-      <i class="checkmark icon"></i>
-    </div>
-  </div>
-</div>
-
-<!-- -->
 <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.7/d3.min.js"></script>
   <script src="dist/js/lightbox-plus-jquery.js"></script>
     <script src="dist/semantic.js"></script>
@@ -290,15 +264,19 @@ $portofolio =[
           }
         ]
       }, 
-      email: {
-        identifier: 'email',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please enter a email'
-          }
-        ]
-      },
+       email: {
+              identifier  : 'email',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your e-mail'
+                },
+                {
+                  type   : 'email',
+                  prompt : 'Please enter a valid e-mail'
+                }
+              ]
+            },
       terms: {
         identifier: 'terms',
         rules: [
@@ -345,16 +323,7 @@ $('a[href*="#"]').on('click', function(e) {
     500,
     'linear'
   )
-});
-$(function(){
-  $("#test").click(function(){
-   duration: 2000,
-    $(".test").modal('show');
-  });
-  $(".test").modal({
-    closable: true
-  });
-});
+})
     </script>
 </body>
 </html>

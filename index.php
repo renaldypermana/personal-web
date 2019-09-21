@@ -2,9 +2,10 @@
 <html>
 <head>
     <link rel="icon" type="img/png" href="img/ra.png" />
-	<title>RA</title>
+	<title>RENALDY</title>
 	<link rel="stylesheet" type="text/css" href="dist/semantic.css">	
-	<link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="dist/components/progress.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/progress.css">
   <link rel="stylesheet" type="text/css" href="dist/css/lightbox.css">
   <link rel="stylesheet" type="text/css" href="dist/components/form.css">
   <link rel="stylesheet" type="text/css" href="dist/components/progress.css">

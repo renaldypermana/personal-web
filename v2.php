@@ -33,7 +33,7 @@
   <div class="item">
     <div class="image">
     	<?php foreach ($profil as $key => $value): ?>
-      <img src="img/smp.jpg">
+      <img src="img/renaldy.png">
     </div>
     <div class="content">
       <a class="header"><?php echo $value['nama']?></a>
@@ -41,7 +41,7 @@
         <span>Description</span>
       </div>
       <div class="description">
-        <p>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></p>
+        <p><b>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></b></p>
       </div>
     </div>  <?php endforeach ?>
   </div></div>

@@ -8,7 +8,8 @@
     <script src="dist/semantic.min.js"></script>
     <script src="dist/components/progress.js"></script>
   <script src="dist/components/form.js"></script>
-    <script srce="dist/components/modal.js"></script>
+    <script src="dist/components/modal.js"></script>
+  <script type="text/javascript" src="dist/components/rating.js"></script>
     <script>
       $('.ui.form')
   .form({

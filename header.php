@@ -10,7 +10,9 @@
   <link rel="stylesheet" type="text/css" href="dist/components/form.css">
   <link rel="stylesheet" type="text/css" href="dist/components/progress.css">
   <link rel="stylesheet" type="text/css" href="dist/components/item.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/button.css"
+  <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/rating.css">
 </head>
 <body>
 	<?php

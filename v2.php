@@ -18,7 +18,7 @@
               </div>
         </header>
         <!-- PENUTUP HEADER -->
-             <div class="ui vertical stripe quote segment container">
+             <div class="ui vertical stripe quote segment container" id="myprofile">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
@@ -105,7 +105,7 @@
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
-         <h2 class="ui header">
+         <h2 class="ui header" id="about">
                   PORTOFOLIO
                   </h2>
         </div>

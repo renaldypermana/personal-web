@@ -146,7 +146,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><br>
       <div class="two fields">
             <div class="field">
               <label>NAME</label>
@@ -180,14 +180,14 @@
       <div class="center aligned row">
         <div class="column">
           <h2 class="ui header">
-            MEDSOS
+            SOCIAL MEDIA
           </h2>
         </div>
       </div>
     </div>
   </div>  
   <br>
-  <div class="ui container">
+  <div class="ui container" style="text-align: center;">
       <a href="https://facebook.com/renaldy.p.s" target="_blank">
         <button class="ui blue button">
           <i class="facebook icon">

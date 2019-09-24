@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" type="img/png" href="img/ra.png" />
-	<title>RENALDY</title>
-	<link rel="stylesheet" type="text/css" href="dist/semantic.css">	
-	<link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="icon" type="img/png" href="img/ra.png" />
+  <title>RENALDY</title>
+  <link rel="stylesheet" type="text/css" href="dist/semantic.css">	
+  <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="stylesheet" type="text/css" href="dist/components/progress.css">
   <link rel="stylesheet" type="text/css" href="dist/css/lightbox.css">
   <link rel="stylesheet" type="text/css" href="dist/components/form.css">
   <link rel="stylesheet" type="text/css" href="dist/components/progress.css">
   <link rel="stylesheet" type="text/css" href="dist/components/item.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/button.css"
+  <link rel="stylesheet" type="text/css" href="dist/components/button.css">
   <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
   <link rel="stylesheet" type="text/css" href="dist/components/rating.css">
 </head>
@@ -50,29 +50,29 @@
     $keahlian =[
         [
         	'img' => 'img/cpp2.jpg',
-            'id' => 'id="example2"',
+            'id' => 'example2',
             'bahasa' => 'C++',
         ],
           [
           	'img' => 'img/html.png',
-            'id' => 'id="example3"',
+            'id' => 'example3',
             'bahasa' => 'HTML',
         ],
           [
           	'img' => 'img/java.png',
-            'id' => 'id="example4"',
+            'id' => 'example4',
             'bahasa' => 'JAVA',
         ],  [
         	'img' => 'img/css.png',
-            'id' => 'id="example5"',
+            'id' => 'example5',
             'bahasa' => 'CSS',
         ],  [
         	'img' => 'img/php.png',
-            'id' => 'id="example6"',
+            'id' => 'example6',
             'bahasa' => 'PHP',
         ],  [
         	'img' => 'img/sql.png',
-            'id' => 'id="example7"',
+            'id' => 'example7',
             'bahasa' => 'MYSQL',
         ],
     ];
@@ -81,7 +81,6 @@ $portofolio =[
           'img' => 'img/dashboard.png',
           'data' => 'dashboard"',
           'keterangan' => 'ini adalah tampilan dashboard',
-
         ],
         [
           'img' => 'img/data-siswa.png',
@@ -105,5 +104,19 @@ $portofolio =[
           'data' => 'coffee',
           'keterangan' => 'ini adalah halaman testimoni Pelanggan',
         ],
+    ];
+$home =[
+        [
+            'href' => 'v1.php',
+            'img' => 'img/v1.jpg',
+            'judul' => 'WEBSITE V1',
+            'deskripsi' => 'example7',
+        ],
+        [
+          'href' => 'v2.php',
+          'img' => 'img/v2.jpg',
+          'judul' => 'WEBSITE V2',
+          'deskripsi' => 'example7',
+        ]
     ];
 	?>

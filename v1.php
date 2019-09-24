@@ -20,9 +20,9 @@
         </header>
 
         <!-- PROFILE -->
-        <div id="myprofile" class="ui container">
-            <br>
-            <div class="ui vertical stripe quote segment">
+  <div id="myprofile" class="ui container">
+  <br>
+  <div class="ui vertical stripe quote segment">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
@@ -33,11 +33,11 @@
                   </h2>
                   <h3>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></h3>
               <?php endforeach ?>
+          </div>
         </div>
-      </div>
+       </div>
     </div>
   </div>
-        </div>
 
         <!-- KEAHLIAN -->
         <div class="ui vertical stripe quote segment container">
@@ -46,11 +46,11 @@
         <div class="column">
           <h3>"My Skill"</h3>
           <?php foreach ($keahlian as $key => $value): ?>
-          <div class="ui active indicating progress" <?php echo $value['id']?> >
+          <div class="label"><?php echo $value['bahasa']?></div> 
+          <div class="ui active indicating progress" id="<?php echo $value['id']?>" >
            <div class="bar">
             <div class="progress"></div>
              </div>
-              <div class="label"><?php echo $value['bahasa']?></div> 
             </div>
             <?php endforeach ?>
         </div>
@@ -86,23 +86,25 @@
           <p>Pembuatan Dashboard admin Pegawai/siswa. Menggunakan HTML 5 dan CSS 3.Dengan menu navbar di samping dan ada form dan hasil tabel di administrator tersebut</p>
         </div>
         <div class="six wide right floated column">
-          <a class="ui basic pink button" href="img/login.png" data-lightbox="dashboard" data-title="Ini adalah tampilan halaman login.">GALLERY</a>
+          <a class="" href="img/login.png" data-lightbox="dashboard" data-title="Ini adalah tampilan halaman login."><img src="img/login.png" style="max-width: 200px"></a>
         </div>
       </div>
        <div class="row">
         <div class="eight wide column">
           <h3 class="ui header">Blu coffeeshop</h3>
-          <p>Pembuatan website blu Coffeshop <a href="http://wwwaldy.000webhostapp.com" target="blank" 
-            ><button class="ui  button">Tampilan website online</button></a></p>
+          <p>Pembuatan website blu Coffeshop 
         </div>
         <div class="six wide right floated column">
           <a class="ui basic pink button" href="img/coffeeshop.png" data-lightbox="coffee" data-title="Ini adalah Halaman utama Blu Coffee shop">GALLERY</a>
+          <a href="http://wwwaldy.000webhostapp.com" target="blank"><button class="ui basic black button">Demo</button></a></p>
         </div>
       </div>
     </div>
   </div>
-<br><br>
+  <br><br>
   <!-- FORM -->
+
+
   <div class="ui container" id="contact">
     <form class="ui form" action="thankyou.php" method="post">
   <div class="ui horizontal divider"><p style="text-align: center;" class="ui large">contact me</p></div>
@@ -121,17 +123,17 @@
     <label>Short Text</label>
     <textarea rows="2"></textarea>
   </div>
-</div><br>
-<div class="inline field">
+  </div><br>
+  <div class="inline field">
     <div class="ui checkbox">
       <input type="checkbox" name="terms">
       <label>I agree to the terms and conditions</label>
     </div>
   </div>
-  <div class="ui basic primary submit button">Submit</div>
-  <div class="ui error message"></div>
-</form>
-</div>
+    <div class="ui basic primary submit button">Submit</div>
+    <div class="ui error message"></div>
+  </form>
+  </div>
         <br>
     <br>
 <!-- footer -->
@@ -139,6 +141,5 @@
 
    <!-- galeri -->
   <?php foreach ($portofolio as $key => $value): ?>
-  <a href="<?php echo $value['img'] ?>" data-lightbox="<?php echo $value['data'] ?>" data-title="<?php echo $value['keterangan'] ?>"
-></a>
+  <a href="<?php echo $value['img'] ?>" data-lightbox="<?php echo $value['data'] ?>" data-title="<?php echo $value['keterangan'] ?>"></a>
   <?php endforeach ?>

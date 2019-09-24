@@ -18,7 +18,7 @@
               </div>
         </header>
         <!-- PENUTUP HEADER -->
-             <div class="ui vertical stripe quote segment container" id="myprofile">
+   <div class="ui vertical stripe quote segment container" id="myprofile">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
@@ -33,18 +33,21 @@
   <div class="item">
     <div class="image">
     	<?php foreach ($profil as $key => $value): ?>
-      <img src="img/renaldy.png">
+         <img src="img/renaldy.png">
     </div>
     <div class="content">
       <a class="header"><?php echo $value['nama']?></a>
       <div class="meta">
         <span>Description</span>
       </div>
-      <div class="description">
-        <p><b>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></b></p>
-      </div>
-    </div>  <?php endforeach ?>
-  </div></div>
+	      <div class="description">
+    	    <p><b>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></b></p>
+      	</div>
+   		 </div> 
+   		<?php endforeach ?>
+	  </div>
+	</div>
+
         <!-- MY SKILL -->
 	<div class="ui vertical stripe quote segment container">
     <div class="ui equal width stackable internally celled grid">
@@ -63,18 +66,19 @@
     </div>
     <div class="content">
       <div class="header">
-      <div class="ui active indicating progress" <?php echo $value['id']?> >
+      <div class="ui active indicating progress" id="<?php echo $value['id']?>" >
            <div class="bar">
             <div class="progress"></div>
              </div>
               <div class="label"><?php echo $value['bahasa']?></div> 
-            </div></div>
+            </div>
+        </div>
     </div>
   </div>
  <?php endforeach ?>
 </div>
         <!-- PENDIDIKAN -->
-        <div class="ui vertical stripe quote segment container">
+<div class="ui vertical stripe quote segment container">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
@@ -86,7 +90,7 @@
       </div>
     </div>
   </div>
-       <div class="ui three cards container">
+<div class="ui three cards container">
    <?php foreach ($pendidikan as $key => $value): ?>
   <div class="ui card" >
     <div class="image">
@@ -121,8 +125,8 @@
     </div>
   </div>
 <!-- CONTACT ME -->
-	<div class="ui container" id="contact">
-    <form class="ui form" action="thankyou.php" method="post">
+<div class="ui container" id="contact">
+ <form class="ui form" action="thankyou.php" method="post">
  <div class="ui vertical stripe quote segment container">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
@@ -165,20 +169,25 @@
       <div class="center aligned row">
         <div class="column">
          <h2 class="ui header">
-                  OR
+                  MEDSOS
                   </h2>
         </div>
       </div>
     </div>
   </div>
-  <div class="ui container"><br>
-  <button class="ui facebook button">
+  <div class="ui center container"><br>
+  <a href="https://facebook.com/renaldy.p.s" target="_blank">
+  <button class="ui blue button">
   <i class="facebook icon"></i>
-  <a href="https://facebook.com/renaldy.p.s" target="_blank">FACEBOOK</a>
-</button>
-<button class="ui instagram button">
-  <i class="instagram icon"></i>
-  <a href="https://instagram.com/renaldyp_s" target="_blank">INSTAGRAM</a>
-</button></div><br>
+  	  FACEBOOK
+  </button>
+  </a>
+  <a href="https://instagram.com/renaldyp_s" target="_blank">
+	<button class="ui purple button">
+  		<i class="instagram icon"></i>
+  			INSTAGRAM
+	</button>
+  </a>
+</div><br>
 <!-- PENutup -->
 <?php include 'footer.php' ?>

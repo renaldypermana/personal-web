@@ -14,7 +14,7 @@
   </div>
 
   <!-- HEADER -->
-  <header class="bgii"id="home">
+  <header class="bgii2"id="home">
     <div class="ui text container">
       <h2 style="font-size: 50px; color: white; position:absolute;top:50%;" class="text container">
       </h2>
@@ -49,7 +49,7 @@
         <div class="description">
            <p>
             <b>
-              Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?>
+              <?php echo $value['1nama']?> <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?>
             </b>
            </p>
         </div>
@@ -132,6 +132,23 @@
       </div>
     </div>
   </div>
+  <br>
+  <div class="ui two cards container">
+  <?php foreach ($portofolio1 as $key => $value): ?>
+  <div class="ui card">
+    <a href="portofolio.php?id=<?php echo $value ['id'] ?>">
+    <div class="image" style="text-align: center;height: 300px">
+      <img src="<?php echo $value['img1'][0]?>" width="530px">
+    </div>
+    </a>
+    <div class="content">
+      <div class="header"><?php echo $value['nama']?></div>
+      <div class="description">example example</div>
+    </div>
+  </div>
+ <?php endforeach ?>
+</div>
+
 
   <!-- CONTACT ME -->
   <div class="ui container" id="contact">

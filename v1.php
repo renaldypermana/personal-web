@@ -34,7 +34,7 @@
                     <img src="img/ra.png" class="ui circular image">
                      <?php echo $value['profil']?>
                   </h2>
-                  <h3>Perkenalkan nama saya <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></h3>
+                  <h3><?php echo $value['1nama']?> <?php echo $value['nama']?> , lahir di <?php echo $value['ttl']?> Tertarik pada bidang it sejak kelas 9 smp. Hobi saya <?php echo $value['hobi']?></h3>
                    <?php endforeach ?>
               </div>
             </div>

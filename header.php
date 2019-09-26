@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="dist/components/item.css">
   <link rel="stylesheet" type="text/css" href="dist/components/button.css">
   <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/rating.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/label.css">
 </head>
 <body>
 	<?php
@@ -39,6 +39,7 @@
     $profil =[
         [
             'profil' => 'MY PROFILE',
+            '1nama' => 'Perkenalkan nama saya ',
             'nama' => 'Renaldy Permana Sundawa',
             'ttl' => 'Surabaya, 12 Mei 2003',
             'alamat' => 'Jl. Tenggumung baru no 170',
@@ -77,6 +78,7 @@
         ],
     ];
 $portofolio =[
+
         [
           'img' => 'img/dashboard.png',
           'data' => 'dashboard"',
@@ -104,7 +106,7 @@ $portofolio =[
           'data' => 'coffee',
           'keterangan' => 'ini adalah halaman testimoni Pelanggan',
         ],
-    ];
+    ];  
 $home =[
         [
             'href' => 'v1.php',
@@ -117,6 +119,35 @@ $home =[
           'img' => 'img/v2.jpg',
           'judul' => 'WEBSITE V2',
           'deskripsi' => 'example7',
-        ]
-    ];
+        ],
+      ];
+
+$portofolio1 = [ 
+    [
+    'tag'       => 'html dan css',
+    'nama'      => 'website administrator',
+    'judul'     => 'DASHBOARD SEDERHANA ',
+    'deskripsi' => 'Pembuatan Dashboard admin Pegawai/siswa. Menggunakan HTML 5 dan CSS 3.Dengan menu navbar di samping dan ada form dan hasil tabel di administrator tersebut',
+    'galery'=> 'administrator',
+    'img1' => [
+      'img/login.png',
+      'img/dashboard.png',
+      'img/data-siswa.png',
+      'img/form-izin.png'
+    ],
+    'id' => "0",
+  ], [
+    'tag'       => 'html dan css',
+    'nama'      => 'Blu coffeeshop',
+    'judul'     => 'BLU Coffeeshop ',
+    'deskripsi' => 'example',
+    'galery'=> 'coffeeshop',
+    'img1' => [
+      'img/coffeeshop.png',
+      'img/about.png',
+    ],
+    'id' => '1',
+    ],
+ 
+  ];
 	?>
